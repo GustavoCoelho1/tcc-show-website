@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Barlow:wght@100&display=swap');
+
+@font-face {
+    src: url(Fontes/Barlow-Thin.ttf);
+    font-family: Barlow-Thin;
+}
+
+
+/*ALTERACOES*/
+
+
+/*.corpo img{
+    margin-top: 68px;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+}*/
+
+/*
+.text-box{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}*/
+
+/*
+.text-box span{
+    text-transform: uppercase;
+    display: block;
+}*/
+
+/*FIM ALTERACOES*/
+
+.linha-rec-cima-x, .linha-rec-baixo-x {
+    width: 100%;
+    height: 4px;
+    background: #1400ab;
+}
+
+.linha-rec-cima-y {
+    width: 100%;
+    height: 4px;
+    background: #ffcc00;
+    margin-bottom: 25px;
+    margin-top: 7px;
+}
+
+.linha-rec-baixo-y {
+    width: 100%;
+    height: 4px;
+    background: #ffcc00;
+    margin-top: 25px;
+    margin-bottom: 7px;
+}
+
+.linha-rec-baixo-x {
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.text1{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 450;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    background-color: #ffcc00;
+    position: relative;
+    animation: text 3s 1;
+}
+
+.text2{
+    font-size: 20px;
+    color: #1400ab;
+}
+
+@keyframes text{
+    0%{
+        color: #ffcc00;
+        margin-bottom: -40px;
+    }
+    30%{
+       letter-spacing: 20px;
+       margin-bottom: -40px; 
+    }
+    85%{
+        letter-spacing: 7px;
+        margin-bottom: -40px;
+    }
+}
+
+
+
+/* Botão suado na tela de bem-vindo */
+.btn-tela{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #1400ab;
+    padding: 20px 40px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+    background: transparent;
+    transition: 0.6 ease-in-out;
+}
+
+.btn-tela:hover {
+    color: white;
+    background: #1400ab;
+    text-decoration: none;
+    transition: 1s;
+}
+/* Botão suado na tela de bem-vindo */
+
+.nav_links.active /* "active" é uma classe que vai ser criada lá no JS, e que servirá pra saber se o usuário clicou no botao de menu*/ { 
+    transform: translateX(0);
+}
+
+div.mobile_menu.active .line_1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+div.mobile_menu.active .line_2 {
+    opacity: 0;
+}
+
+div.mobile_menu.active .line_3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*Inicio Carousel */
+
+.carousel-item img {
+
+    background-size: contain;
+    height: 40vw;
+    border-radius: 0 0 100px 100px;
+}
+
+.container {
+
+    margin-top: 50px;
+    border-radius: 100px;
+    padding: 0px !important;
+}
+
+
+.barra_carousel::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    z-index: -1;
+    border-radius: 100px;
+    border: 2px solid #0f0080;
+}
+
+.barra_carousel::before {
+    content: 'Veja algumas das ferramentas TCC Show!';
+    text-align: center;
+    color: #ffcc00;
+    padding-top: 30px;
+    font-size: calc(1.50vw + 10px);
+    right: 0;
+    left: 0;
+    height: 100px;
+    display: block;
+    z-index: 5;
+    background: #0f0080;
+    border-radius: 100px 100px 0 0;
+}
+
+.carousel-caption h2 {
+
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.carousel-caption p {
+
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 80px;
+    color: #fff;
+}
+
+.main-btn {
+
+    background-color: transparent;
+    color: #fff;
+    border-radius: 30px;
+    border: 2px solid #fff ;
+    width: 200px;
+    height: 60px;
+    padding: 5px 20px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.main-btn:hover {
+
+    text-decoration: none;
+    color: #1400ab;
+    background-color: #fff;
+    
+}
+/* Fim Carousel */
+
+/* Inicio Recursos */
+#rec-p{
+
+    color: #171717;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 22px;
+}
+
+.recursos h1{
+    
+    font-size: 36px;
+    font-weight:600;
+    color: #1400ab;
+}
+
+.container-recursos{
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-recursos .card{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0,0, 0.2);
+    transition: 0.5s;
+}
+
+.container-recursos:hover .card{
+    filter: blur(10px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.container-recursos .card:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.container-recursos .card .circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffcc00;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.container-recursos .card h2{
+    color: #1400ab;
+    font-size: 45px;
+    padding: 30px 0;
+    margin-top: 10px;
+}
+
+.container-recursos .card .content{
+    position: relative;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.container-recursos .card .content p{
+    color: #757575;
+}
+
+.container-recursos .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #1400ab;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+.indx_recursosCenter {
+    margin: 50px 0 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ /* Fim dos Recursos */

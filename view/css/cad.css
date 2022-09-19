@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Barlow:wght@100&display=swap');
+
+* {
+    font-family: 'Baloo 2', cursive;
+}
+
+.fundo {
+    background-image: url(../Images/fundo_solo.png); 
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20vh;
+    padding-top: 100px;
+}
+
+.cad_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cad_formLyt {
+    background-color: white;
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: inset 0px 0px 0px 4px #1400ab;
+    box-sizing: border-box;
+}
+
+.cad_bordaAmarela {
+    padding: 40px;
+    width: 100%;
+    height: fit-content;
+    box-shadow: inset 0px 0px 0px 4px #ffcc00;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.cad_titulo {
+    color: #1400ab;
+    margin-bottom: 30px;
+}
+
+.cad_formLyt div form label {
+    color: #1400ab
+}
+
+.cad_cmbCorCinza /*Classe do Bootstrap*/{
+    color: #6c757d !important;
+}
+
+.cad_cmbCorAzul {
+    color: #0A005b !important;
+}
+
+.cad_formBtn {
+    margin-top: 10px;
+    color: #ffcc00 !important;
+    background-color: #1400ab !important;
+    border-color: #1400ab !important;
+    padding: 13px 23px 13px 23px !important;
+    border-radius: 10px !important;
+    transition: 0.5s ease-in-out !important;
+}
+
+.cad_formBtn:hover {
+    color: #1400ab !important;
+    background-color: #ffcc00 !important;
+    border-color: #ffcc00 !important;
+}
+
+form div input {
+    color: #0A005b !important;
+}
+
+.cad_subtitulo {
+    color: #1400ab
+}
+
+.cad_traco {
+    color: #1400ab;
+    width: 50% !important;
+    text-align: center;
+    height: 2px;
+    border-radius: 1px;
+    background: #f0f0f0;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.cad_alert {
+    background-color: white;
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: inset 0px 0px 0px 4px #1400ab;
+    box-sizing: border-box;
+    margin-bottom: 20px
+}
+
+.cad_alertBorda {
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    box-shadow: inset 0px 0px 0px 4px #ffcc00;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cad_alertBorda h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.log_input {
+    margin-top: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}

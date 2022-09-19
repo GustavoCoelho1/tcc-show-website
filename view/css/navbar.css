@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Barlow:wght@100&display=swap');
+
+@font-face {
+    src: url(Fontes/Barlow-Thin.ttf);
+    font-family: Barlow-Thin;
+}
+
+
+* {
+    font-family: 'Baloo 2', cursive !important;
+    list-style: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    height: var(--alturanav);
+    transition: 0.3s;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    padding: 10px 20px 10px 20px !important;
+    box-shadow: 0px 4px 6px rgba(1, 0, 36, 0.25);
+
+    --alturanav: fit-content;
+}
+
+nav li {
+    list-style: none;
+}
+
+.nav_imgConfig {
+    width: 30px;
+}
+
+.nav_imgLogo {
+    width: 80px;
+}
+
+/*#region barraPesquisaLyt*/
+
+.nav_barraPesquisa{
+    display: flex;
+    align-items: center;
+}
+
+.nav_barraPesquisaLyt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_imgBarra {
+    position: relative;
+    left: 30px;
+    height: 15px;
+    width: 15px !important;
+    background: rgb(243, 241, 241);;
+}
+
+.nav_barraPesquisa {
+    border-radius: 30px;
+    background: rgb(243, 241, 241);
+    color: #757575;
+    font-size: 15px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #F3F1F1;
+    margin-right: 20px;
+}
+
+.nav_btnPesquisa {
+    cursor: pointer;
+    border-radius: 30px;
+    color: #1400ab;
+    border: 1px solid #ffcc00;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    transition: 0.6s ease-in-out;
+}
+
+/*#endregion barraPesquisaLyt*/
+
+/*#region navLinksLyt/menu */
+
+.nav_menu {
+    display: none;
+    cursor: pointer;
+}
+
+.nav_menu div {
+    width: 32px;
+    height: 2px;
+    background: #1400ab;
+    margin: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_linksLyt, .nav_linksLyt.li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_linksLyt {
+    display: flex;
+    align-items: center;
+}
+
+.nav_linksLyt li {
+    margin-right: 20px;
+}
+
+.nav_linksLyt .nav_link a{
+
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    text-decoration: none !important;
+    
+    background-color: var(--background-color);
+
+    --background-color: white;
+    --azul: #1400ab;
+    --border-size: 2px;
+}
+
+.nav_linksLyt .nav_link a::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+
+    background-color: var(--azul);
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);  
+}
+
+.nav_linksLyt .nav_link a:hover::before {
+    transform: scaleX(1);
+}
+
+.nav_linksLyt .nav_link a{
+    color: #1400ab;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*#endregion navLinksLyt/menu*/
+
+
+@media (max-width: 1200px) {
+    .nav_menu {
+        display: block;
+    }
+
+    .nav_linksLyt .nav_link {
+        padding: 10px;
+        margin: 0px;
+        align-self: center;
+        opacity: 0;
+    }
+
+    .nav_linksLyt li {
+        margin-right: 0px;
+    }
+
+    .nav_linksLyt {
+        position: absolute;
+        background: #ffff;
+        height: fit-content;
+        width: 200px;
+        top: 58px;
+        right: 0px;
+        text-align: center;
+        z-index: -1;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        border-radius: 0 0 0 100px;
+        box-shadow: 0px 4px 6px rgba(1, 0, 36, 0.25);
+        border-top: none;
+        border-right: none;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav_btnLogin, .nav_btnPerfil{
+        margin: 10px 0px 10px 0px !important;
+    }
+
+    .nav_imgConfig {
+        margin: 10px 0px 40px 0px !important;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .nav_barraPesquisaLyt
+    {
+        display: none;
+    }
+}
+
+/*#region Animação do menu responsivo*/
+
+.nav_linksLyt.active /* "active" é uma classe que vai ser criada lá no JS, e que servirá pra saber se o usuário clicou no botao de menu*/ { 
+    transform: translateX(0);
+}
+
+.nav_menu.active .line_1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.nav_menu.active .line_2 {
+    opacity: 0;
+}
+
+.nav_menu.active .line_3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*#endregion Animação do menu responsivo*/
+
+/*#region btnLogin/btnPerfil/btnConfig*/
+
+.nav_btnLogin {
+    cursor: pointer;
+    border-radius: 30px;
+    color: #1400ab;
+    border: 1px solid #ffcc00;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    padding: 12px 34px;
+    transition: 0.6s ease-in-out;
+}
+
+.nav_btnLogin:hover, .nav_btnPesquisa:hover {
+    background: #ffcc00;
+    color: #1400ab;
+}
+
+/*
+.nav_btnPerfil {
+    cursor: pointer;
+    height: 35px;
+    border-radius: 30px;
+    color: #1400ab;
+    border: none;
+    background:#1400ab;
+    position: relative;
+}
+*/
+
+.nav_btnPerfil{
+    cursor: pointer;
+    border-radius: 30px;
+    color: #ffcc00;
+    border: 1px solid #1400ab;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: #1400ab;
+    position: relative;
+    padding: 12px 34px;
+    transition: 0.6s ease-in-out;
+}
+
+
+
+/*#endregion btnLogin/btnPerfil/imgConfig*/

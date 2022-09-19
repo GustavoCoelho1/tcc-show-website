@@ -1,0 +1,549 @@
+/* Fonte */
+/*@font-face {
+    src: url(Fontes/Baloo-Regular.ttf);
+    font-family: Baloo;
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Barlow:wght@100&display=swap');
+
+* {
+
+    font-family: 'Baloo 2', cursive;
+    font-style: normal;
+    font-weight: normal;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+
+    bottom: auto;
+}
+
+.nav_links, .nav_links.li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+}
+
+.corpo {
+
+    margin-top: 68px;
+    height: 900px;
+    width: 100%;
+    background-image: url(../Images/fundo_solo.png);
+    background-size: cover;
+}
+
+.corpo .bola_sec {
+    position: relative;
+    top: 25px;
+    right: 150px;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bola_sec img{
+    height: 26%;
+    margin-right: 100px;
+}
+
+/* Textos no corpo da pag */
+
+.mobile {
+    display: none;
+}
+
+.text-box {
+
+    width: fit-content;
+    position: absolute;
+    top: 45%;
+    right: 5vw;
+    text-align: left;
+}
+
+.text-box-mobile {
+
+    width: fit-content;
+    margin-top: 75px;
+    text-align: center;
+    display: none;
+}
+
+.text-box h1 {
+
+    color: #0A005b;
+    font-size: calc(2vw + 20px);
+}
+
+.text-box p {
+
+    font-size: 20px;
+    color: #0A005b;
+    font-weight: bold;
+}
+/* Final dos textos no corpo da pag */
+
+
+/* Botao usado no corpo - Novo Projeto */
+.hero-btn {
+
+    display: inline-block;
+    text-decoration: none;
+    color: #ffff;
+    padding: 20px 40px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #1400ab;
+    transition: 0.6s ease-in-out;
+}
+
+.hero-btn:hover {
+
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.botao-login {
+
+    cursor: pointer;
+    border-radius: 30px;
+    color: #1400ab;
+    border: 1px solid #ffcc00;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    padding: 12px 34px;
+}
+
+.botao-perfil {
+
+    cursor: pointer;
+    height: 35px;
+    border-radius: 30px;
+    color: #1400ab;
+    border: none;
+    background:#1400ab;
+    position: relative;
+}
+
+.botao-login {
+
+    transition: 0.6s ease-in-out;
+}
+
+.botao-login:hover {
+
+    background: #ffcc00;
+    color: #1400ab;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+form div img {
+    position: relative;
+    left: 30px;
+    height: 15px;
+    width: 15px !important;
+    background: rgb(243, 241, 241);;
+}
+
+.barra-pesquisa {
+    border-radius: 30px;
+    background: rgb(243, 241, 241);
+    color: #757575;
+    font-size: 15px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #F3F1F1;
+    margin-right: 20px;
+}
+
+.botao-pesquisa {
+
+    cursor: pointer;
+    border-radius: 30px;
+    color: #1400ab;
+    border: 1px solid #ffcc00;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    transition: 0.6s ease-in-out;
+}
+
+.botao-pesquisa:hover {
+
+    background: #ffcc00;
+}
+
+.navbarLogo{
+
+    width: 80px;
+}
+
+.container {
+
+    position: relative;
+    bottom: 150px;
+    padding: 0px !important;
+}
+
+nav {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    height: var(--alturanav);
+    transition: 0.3s;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    padding: 10px 20px 10px 20px !important;
+    box-shadow: 0px 4px 6px rgba(1, 0, 36, 0.25);
+
+    --alturanav: fit-content;
+}
+
+nav img {
+
+    width: 30px;
+    margin-right: 0px;
+}
+
+.nav_links li {
+    margin-right: 20px;
+}
+
+.nav_links li.text a{
+
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    
+    background-color: var(--background-color);
+
+    --background-color: white;
+    --azul: #1400ab;
+    --border-size: 2px;
+}
+
+.nav_links li.text a::before {
+
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+
+    background-color: var(--azul);
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);  
+}
+
+.nav_links li.text a:hover::before {
+
+    transform: scaleX(1);
+}
+
+.nav_links li a{
+
+    color: #1400ab;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.mobile_menu {
+    display: none;
+    cursor: pointer;
+}
+
+div.mobile_menu div{
+    width: 32px;
+    height: 2px;
+    background: #1400ab;
+    margin: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Fim Botão usado no corpo */
+
+
+@media (max-width: 1200px) {
+
+    body {
+
+        bottom: auto;
+        overflow-x: hidden;
+    }
+
+    .bola_sec {
+        right: 0!important;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center!important;
+        width: 600px !important;
+        height: 600px !important;
+    }
+
+    .bola_sec img{
+        height: 23%;
+        margin-right: 0!important;
+    }
+
+    .text-box {
+        display: none;
+    }
+
+    .text-box-mobile {
+        display: block;
+    }
+
+    .text-box-mobile p {
+        color: #1400ab;
+        margin-bottom: 55px;
+    }
+
+    .text-box-mobile h1 {
+
+        color: #0A005b;
+        font-size: calc(2vw + 20px);
+    }
+    
+    .corpo {
+        display: flex;
+        margin-top: 58px;
+        height: 800px;
+        justify-content: center;
+    }
+
+    .carousel-item img {
+        height: auto!important;
+    }
+
+    .nav_links {
+        position: absolute;
+        background: #ffff;
+        height: fit-content;
+        width: 200px;
+        top: 58px;
+        right: 0px;
+        text-align: center;
+        z-index: -1;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        border-radius: 0 0 0 100px;
+        box-shadow: 0px 4px 6px rgba(1, 0, 36, 0.25);
+        border-top: none;
+        border-right: none;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav_linksLyt li {
+
+        align-self: center;
+        opacity: 0;
+    }
+
+    .container {
+
+        position: relative;
+        bottom: 150px;
+        padding: 0px !important;
+    }
+
+    .botao-pesquisa {
+
+        display: none;
+    }
+
+    .navbarEngre {
+        margin: 10px 0px 40px 0px !important;
+    }
+
+    div.mobile_menu {
+        display: block;
+    }
+
+    .botao-login, .botao-perfil{
+        margin: 10px 0px 10px 0px !important;
+    }
+
+    input {
+        size: 20;
+    }
+}
+
+.nav_links.active /* "active" é uma classe que vai ser criada lá no JS, e que servirá pra saber se o usuário clicou no botao de menu*/ { 
+    transform: translateX(0);
+}
+
+div.mobile_menu.active .line_1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+div.mobile_menu.active .line_2 {
+    opacity: 0;
+}
+
+div.mobile_menu.active .line_3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Inicio Carousel */
+
+main {
+    width: 100%;
+    height: fit-content;
+}
+
+/* Inicio Recursos */
+#rec-p{
+
+    color: #171717;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 22px;
+}
+
+.recursos {
+
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.recursos h1{
+    
+    font-size: 36px;
+    font-weight:600;
+    color: #1400ab;
+}
+
+.container-recursos{
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-recursos .card{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0,0, 0.2);
+    transition: 0.5s;
+}
+
+.container-recursos:hover .card{
+    filter: blur(10px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.container-recursos .card:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.container-recursos .card .circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffcc00;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.container-recursos .card h2{
+    color: #1400ab;
+    font-size: 45px;
+    padding: 30px 0;
+    margin-top: 10px;
+}
+
+.container-recursos .card .content{
+    position: relative;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.container-recursos .card .content p{
+    color: #757575;
+}
+
+.container-recursos .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #1400ab;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+.indx_recursosCenter {
+    margin: 50px 0 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Fim dos Recursos */

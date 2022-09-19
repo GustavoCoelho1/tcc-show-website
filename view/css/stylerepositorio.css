@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Barlow:wght@100&display=swap');
+
+/* detalhes gerais */
+
+.fundodetalhar{ 
+    background-image: url(../imagens/fundo_solo2.png);
+    width: 100%;
+}
+
+.form-label{
+    color: #1300AA;
+}
+
+/* repositorio */
+
+.titulo-rep{
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    color: #1300AA;
+}
+
+.rep-alinhamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rep_form {
+    background-color: white;
+    padding: 8px;
+
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: inset 0px 0px 0px 4px #1400ab;
+    
+    box-sizing: border-box;
+}
+
+.rep_borda {
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+    
+    box-shadow: inset 0px 0px 0px 4px #ffcc00;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.botao-procurar-repositorio{
+    background-color: #1300AA;
+    border-radius: 10px;
+    padding: 14px 23px;
+    border: none;
+
+    font-size: 15px;
+    color: #FFCC00;
+    font-family: 'Baloo 2', cursive;
+
+    transition: 0.8s;
+}
+
+.botao-procurar-repositorio:hover{
+    color: #1300AA;
+    background-color: #FFCC00;
+}
+
+.cad_cmbCorCinza /*Classe do Bootstrap*/{
+    color: #6c757d !important;
+}
+
+.cad_cmbCorAzul {
+    color: #0A005b !important;
+}
+
+/* cards de informação dos projetos */
+
+.infos{
+    background-color: white;
+    border-radius: 20px;
+    border: 4px #1300AA solid;
+    outline: 4px solid white;
+}
+
+.borda-dupla{
+    margin: 4px;
+    padding: 4vh;
+    border: 4px #FFCC00 solid;
+    border-radius: 16px;
+}
+
+.botao-infos{
+    background-color: #1300AA;
+    border-radius: 10px;
+    padding: 14px 23px;
+    border: none;
+
+    font-size: 15px;
+    color: #FFCC00;
+    font-family: 'Baloo 2', cursive;
+
+    transition: 0.8s;
+}
+
+.botao-infos:hover{
+    color: #1300AA;
+    background-color: #FFCC00;
+}
+
+.logo-projeto{
+    max-width: 250px;
+    max-height: 250px;
+}

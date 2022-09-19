@@ -1,0 +1,10 @@
+.fundo-enviar{
+    background-image: url(../imagens/fundo_solo.png);
+    width: 100%;
+}
+
+
+.enviarImg{
+    width: 200px;
+    height:170px;
+}
